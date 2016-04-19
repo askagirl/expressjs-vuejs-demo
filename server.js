@@ -7,31 +7,15 @@ app.use(express.static('assets'));
 app.use(express.static('view'));
 app.use(express.static('viewModel'));
 
+
+
 app.get('/',function(req,res){
     res.sendFile(__dirname + "index.html");
 });
 
-/**
- *@api {get} /data 使用者資訊 Request
- *@apiName GetUser
- *@apiGroup User
- *@apiVersion 1.0.0
- *
- *@apiSuccess {String} name 使用者名稱.
- *
- *@apiSuccessExample Example data on success:
- *{
- *	name:'Paul'
- *}
- */
-app.get('/api/v1/data',function(req, res){
-	var data = {
-		name:'Jack',
-		value:123
-	}
-	res.setHeader('Content-Type', 'application/json');
-	res.send(data); 
-});
+//api
+require('./api/v1/user.js')(app);
+
 
 app.listen(port,function(){
     console.log("Run http://localhost:"+port);
