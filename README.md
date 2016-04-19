@@ -14,7 +14,7 @@ npm install -g apidoc
 
 ```
 /* output apidoc */
-apidoc -i api
+apidoc -i api -o assets/doc
 ```
 
 # License

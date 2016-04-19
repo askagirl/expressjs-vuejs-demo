@@ -8,9 +8,12 @@ app.use(express.static('view'));
 app.use(express.static('viewModel'));
 
 
-
 app.get('/',function(req,res){
-    res.sendFile(__dirname + "index.html");
+    res.sendFile(__dirname + "/index.html");
+});
+
+app.get('/doc',function(req,res){
+    res.sendFile(__dirname + "/doc/index.html");
 });
 
 //api
