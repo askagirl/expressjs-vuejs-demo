@@ -1,0 +1,7 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "api 描述",
+  "title": "api 文件標題",
+  "url" : "http://localhost/api/v1"
+}

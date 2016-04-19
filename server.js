@@ -3,16 +3,27 @@ var app         =   express();
 
 var port = process.env.PORT || 3000;
 
-app.use(express.static('public'));
-
+app.use(express.static('assets'));
 app.use(express.static('view'));
 app.use(express.static('viewModel'));
 
 app.get('/',function(req,res){
     res.sendFile(__dirname + "index.html");
-    // res.sendFile(__dirname + "/login.vue");
 });
 
+/**
+ *@api {get} /data 使用者資訊 Request
+ *@apiName GetUser
+ *@apiGroup User
+ *@apiVersion 1.0.0
+ *
+ *@apiSuccess {String} name 使用者名稱.
+ *
+ *@apiSuccessExample Example data on success:
+ *{
+ *	name:'Paul'
+ *}
+ */
 app.get('/api/v1/data',function(req, res){
 	var data = {
 		name:'Jack',
