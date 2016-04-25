@@ -11,9 +11,9 @@ node server.js
 ```
 
 ## Demo
-```
-http://localhost:3000/
-```
+
+[http://localhost:3000/](http://localhost:3000/)
+
 
 ## Generate API Document
 ```
@@ -27,9 +27,8 @@ apidoc -i api -o doc
 ```
 
 ## View API Document
-```
-http://localhost:3000/doc
-```
+
+[http://localhost:3000/doc](http://localhost:3000/doc)
 
 ## License
 MIT
