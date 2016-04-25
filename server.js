@@ -18,6 +18,7 @@ app.get('/doc',function(req,res){
 
 //api
 require('./api/v1/user.js')(app);
+// app.use('/api/v1/user',require('./api/v1/user.js'));
 
 
 app.listen(port,function(){
