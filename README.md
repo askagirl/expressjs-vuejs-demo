@@ -2,10 +2,21 @@
 demo a web page use vue.js and express.js
 
 ## Required
-- [Node.js](https://nodejs.org/)
-- [MongoDB](https://www.mongodb.org/)
+- [Bower](http://bower.io/)(Web browser package management)
+- [NPM](http://npmjs.com)(Server package management)
+- [Node.js](https://nodejs.org/)(Server service)
+- [MongoDB](https://www.mongodb.org/)(Database service)
 
 ## Run
+
+```
+npm install
+```
+
+```
+bower install
+```
+
 ```
 node server.js
 ```
