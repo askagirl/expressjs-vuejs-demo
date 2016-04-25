@@ -11,6 +11,7 @@ app.use(bodyParser.json())
 var port = process.env.PORT || 3000;
 
 app.use(express.static('assets'));
+app.use(express.static('bower_components'));
 app.use(express.static('view'));
 app.use(express.static('viewModel'));
 
