@@ -10,7 +10,12 @@ demo a web page use vue.js and express.js
 node server.js
 ```
 
-## Generate api doc
+## Demo
+```
+http://localhost:3000/
+```
+
+## Generate API Document
 ```
 // install apidoc
 npm install -g apidoc
@@ -18,20 +23,10 @@ npm install -g apidoc
 
 ```
 // output apidoc
-apidoc -i api -o assets/doc
+apidoc -i api -o doc
 ```
 
-## Show vue.js demo
-```
-http://localhost:3000/
-```
-
-## Show api demo
-```
-http://localhost:3000/api/v1/user
-```
-
-## Show apidoc demo
+## View API Document
 ```
 http://localhost:3000/doc
 ```
