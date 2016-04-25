@@ -38,7 +38,8 @@ bower_components
 .node_repl_history
 
 # api doc
-assets/doc/
+assets/doc
+doc
 
 # mac finder files
 .DS_Store

@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 
 var port = process.env.PORT || 3000;
 
-app.use(express.static('assets'));
+app.use(express.static('doc'));
 app.use(express.static('bower_components'));
 app.use(express.static('view'));
 app.use(express.static('viewModel'));
@@ -28,13 +28,13 @@ app.get('/doc',function(req,res){
 
 //api
 var account = require('./api/v1/accounts');
+app.post('/api/v1/auth', account.auth);
+
 app.get('/api/v1/accounts', account.findAll);
 app.get('/api/v1/accounts/:id', account.findById);
 app.post('/api/v1/accounts', account.addAccount);
 app.put('/api/v1/accounts/:id', account.updateAccount);
 app.delete('/api/v1/accounts/:id', account.deleteAccount);
-
-app.post('/api/v1/auth', account.auth);
 
 var wine = require('./api/v1/wines');
 app.get('/api/v1/wines', wine.findAll);
