@@ -1,12 +1,16 @@
 # expressjs-vuejs-demo
 demo a web page use vue.js and express.js
 
-# Run
+## Required
+- [Node.js](https://nodejs.org/)
+- [MongoDB](https://www.mongodb.org/)
+
+## Run
 ```
 node server.js
 ```
 
-# Generate api doc
+## Generate api doc
 ```
 // install apidoc
 npm install -g apidoc
@@ -32,5 +36,5 @@ http://localhost:3000/api/v1/user
 http://localhost:3000/doc
 ```
 
-# License
+## License
 MIT
