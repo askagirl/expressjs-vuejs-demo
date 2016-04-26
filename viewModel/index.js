@@ -9,9 +9,8 @@ $(document).ready(function(){
 	var login = new Vue({
 		el: '#loginModal',
 		data: {
-			name:'admin',
-			password:'123456',
-			showModal: false
+			name:'',
+			password:''
 		},
 		methods:{
 			clickModal: function(){
@@ -28,9 +27,23 @@ $(document).ready(function(){
 			        success: function(result) {
 			            console.log(JSON.stringify(result));
 			            if(result.error){
-			            	// alert(result.error);
+			            	swal({
+			            		title: "Login Error!",
+			            		text: result.error,
+			            		type: "error",
+			            		confirmButtonText: "OK" 
+			            	},function(){
+			            		location.reload();
+			            	});
 			            }else{
-			            	// alert(JSON.stringify(result))
+			            	swal({
+			            		title: "Login Success!",
+			            		text: JSON.stringify(result),
+			            		type: "success",
+			            		confirmButtonText: "OK" 
+			            	},function(){
+			            		//location.reload();
+			            	});
 			            }
 			        }
 			    });
